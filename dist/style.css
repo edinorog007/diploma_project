@@ -1,0 +1,647 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+@font-face {
+  font-family: MontserratLight;
+  src: url("../main/fonts/MontserratLight.ttf");
+}
+@font-face {
+  font-family: MontserratRegular;
+  src: url("../main/fonts/MontserratRegular.ttf");
+}
+@font-face {
+  font-family: MontserratExtraBold;
+  src: url("../main/fonts/Montserrat-ExtraBold.ttf");
+}
+@font-face {
+  font-family: MontserratSemiBold;
+  src: url("../main/fonts/Montserrat-SemiBold.ttf");
+}
+@font-face {
+  font-family: Riffic;
+  src: url("../main/fonts/Riffic.ttf");
+}
+@font-face {
+  font-family: Rubik;
+  src: url("../main/fonts/Rubik-Bold.ttf");
+}
+@font-face {
+  font-family: GilroyRegular;
+  src: url("../main/fonts/gilroy-regular.ttf");
+}
+@keyframes animationDisplay {
+  from {
+    opacity: 0;
+    transform: scale(105%);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes animationDisplayOn {
+  from {
+    opacity: 0;
+    transform: scale(105%);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes aboutColorHeader {
+  from {
+    border-color: #5A94CA;
+    color: #5A94CA;
+    stroke: #5A94CA;
+  }
+  80% {
+    border-color: #3D9586;
+    color: #3D9586;
+    stroke: #3D9586;
+  }
+  to {
+    border-color: #5A94CA;
+    color: #5A94CA;
+    stroke: #5A94CA;
+  }
+}
+@keyframes priceImage {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.title {
+  font-family: Riffic, sans-serif;
+  font-size: 64px;
+  text-align: center;
+  color: #5A94CA;
+}
+.wave {
+  width: 100%;
+  height: 97px;
+  background-size: 2000px 100px;
+  position: absolute;
+}
+.layout {
+  background-image: url("../main/images/background.png");
+  background-size: cover;
+  background-position: center;
+}
+.layout .header {
+  padding: 23px 0 24px 0;
+  background: rgba(53, 44, 19, 0.3);
+}
+.layout .header .menu .menu-items {
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+  display: grid;
+  grid-template: 1fr / repeat(2, 134px) 100px 129px 126px 73px repeat(2, 69px);
+}
+.layout .header .menu .menu-items .menu-item {
+  font-family: MontserratRegular, sans-serif;
+  font-size: 20px;
+}
+.layout .header .menu .menu-items .menu-item:nth-child(5) {
+  justify-self: end;
+}
+.layout .header .menu .menu-items .menu-item:nth-child(6) {
+  justify-self: end;
+}
+.layout .header .menu .menu-items .menu-item:nth-child(7) {
+  justify-self: end;
+}
+.layout .header .menu .menu-items .menu-item:nth-child(8) {
+  justify-self: end;
+}
+.layout .header .menu .menu-items .menu-item:hover a {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+.layout .header .menu .menu-items .menu-item:hover a svg {
+  fill: #FFFFFF;
+}
+.layout .header .menu .menu-items .menu-item a {
+  color: #E9E1D9;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.layout .header .menu .menu-items .menu-item a svg {
+  fill: #E9E1D9;
+}
+.layout .header .menu .menu-items .logo {
+  justify-self: center;
+}
+.layout .main {
+  padding: 239px 0 230px;
+  overflow: hidden;
+  position: relative;
+}
+.layout .main .wave-one {
+  background-image: url("../main/images/wave.png");
+  bottom: 0;
+  left: 0;
+}
+.layout .main .main-text {
+  text-align: center;
+  font-family: GilroyRegular, sans-serif;
+  font-size: 64px;
+  color: #FAF5F0;
+  margin-bottom: 149px;
+  line-height: 78px;
+  letter-spacing: 3px;
+}
+.layout .main .main-action {
+  text-align: center;
+}
+.layout .main .main-action .btn {
+  font-family: MontserratRegular, sans-serif;
+  font-size: 24px;
+  text-align: center;
+  color: #FCF8F4;
+  padding: 21px;
+  width: 376px;
+  height: 71px;
+  background-color: #E55056;
+  box-sizing: border-box;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+.layout .main .main-action .btn:hover {
+  background-color: #c4464c;
+}
+.sales {
+  padding: 120px 0 60px 0;
+  background-color: #FFFEFD;
+}
+.sales .sales-title {
+  font-family: Riffic, sans-serif;
+  font-size: 64px;
+  text-align: center;
+  color: #5A94CA;
+  margin-bottom: 120px;
+}
+.sales .sales-cards {
+  display: flex;
+  justify-content: space-between;
+}
+.sales .sales-cards .sales-card {
+  width: 376px;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 30px;
+  background-color: #8CD3C7;
+  box-shadow: 0 0 20px rgba(14, 83, 71, 0.2);
+  transition: 0.3s;
+}
+.sales .sales-cards .sales-card:hover {
+  box-shadow: 0 0 30px rgba(5, 45, 40, 0.2);
+  transform: scale(1.05);
+}
+.sales .sales-cards .sales-card .sales-card-info {
+  padding: 135px 15px 26px 15px;
+  border-radius: 30px;
+}
+.sales .sales-cards .sales-card .sales-card-info .sales-card-title {
+  position: absolute;
+  width: 170px;
+  padding: 27px 10px 25px 19px;
+  border-radius: 0 30px 0 60px;
+  background-color: #FFFFFF;
+  font-family: MontserratExtraBold, sans-serif;
+  font-size: 64px;
+  color: #E55056;
+  top: 0;
+  right: 0;
+  text-align: center;
+}
+.sales .sales-cards .sales-card .sales-card-info .sales-card-image {
+  text-align: center;
+}
+.sales .sales-cards .sales-card .sales-card-desc {
+  padding: 18px 18px 19px 18px;
+  font-family: MontserratSemiBold, sans-serif;
+  font-size: 24px;
+  text-align: center;
+  color: #3D9586;
+  background-color: #F3FBF9;
+  border-radius: 0 0 30px 30px;
+  position: relative;
+  bottom: -1px;
+}
+.sales .sales-text {
+  font-family: MontserratLight, sans-serif;
+  font-size: 24px;
+  color: #38250D;
+  text-align: center;
+  margin-top: 60px;
+}
+.about-card-general {
+  background-image: url("../main/images/background-about-card.png");
+  background-position: center;
+  background-size: cover;
+  width: 515px;
+  height: 344px;
+  padding: 36px 27px;
+  flex-direction: column;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);
+}
+.about-card-title-general {
+  font-family: MontserratRegular, sans-serif;
+  font-size: 32px;
+  text-align: center;
+  color: #2B2104;
+}
+.about {
+  padding: 124px 0;
+  background-color: #FFF9F2;
+  position: relative;
+}
+.about .wave-one {
+  background-image: url("../main/images/wave.png");
+  top: 0;
+  left: 0;
+  rotate: 180deg;
+}
+.about .about-title {
+  font-family: Riffic, sans-serif;
+  font-size: 64px;
+  text-align: center;
+  color: #5A94CA;
+}
+.about .about-text {
+  margin: 80px auto 80px auto;
+  width: 963px;
+  font-size: 32px;
+  line-height: 39px;
+  text-align: center;
+  color: #2B2104;
+  font-family: MontserratLight, sans-serif;
+}
+.about .about-accordion h3 {
+  font-family: MontserratMedium, sans-serif;
+  font-size: 24px;
+  color: #5A94CA;
+  padding: 16px 56px 17px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 556px;
+  height: 62px;
+  border: 2px solid #5A94CA;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: all 0.3s;
+  animation: aboutColorHeader 1.7s linear infinite;
+}
+.about .about-accordion h3 svg {
+  stroke: #5A94CA;
+  transition: stroke 0.3s;
+  animation: aboutColorHeader 1.7s linear infinite;
+}
+.about .about-accordion .ui-accordion-header {
+  background: transparent;
+  margin: 20px 0;
+}
+.about .about-accordion .ui-accordion-header:hover {
+  border-color: #3D9586;
+  color: #3D9586;
+}
+.about .about-accordion .ui-accordion-header:hover svg {
+  stroke: #3D9586;
+}
+.about .about-accordion .ui-accordion-header-collapsed svg {
+  rotate: 180deg;
+}
+.about .about-accordion .ui-accordion-content {
+  background: none;
+  border: none;
+  padding: 40px 0;
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template: auto / 1fr 1fr;
+  grid-gap: 40px;
+  justify-items: center;
+  align-items: center;
+  color: #2B2104;
+}
+.about .about-accordion .ui-accordion-content .about-card {
+  background-image: url("../main/images/background-about-card.png");
+  background-position: center;
+  background-size: cover;
+  width: 515px;
+  height: 344px;
+  padding: 36px 27px;
+  flex-direction: column;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about .about-accordion .ui-accordion-content .about-card .about-card-title {
+  font-family: MontserratRegular, sans-serif;
+  font-size: 32px;
+  text-align: center;
+  color: #2B2104;
+  margin-top: 104px;
+  transition: font-size 0.3s;
+}
+.about .about-accordion .ui-accordion-content .about-card .about-card-desc {
+  display: none;
+}
+.about .about-accordion .ui-accordion-content .about-card .about-card-action {
+  display: inline-block;
+}
+.about .about-accordion .ui-accordion-content .about-card .about-card-action button {
+  border: none;
+  background: transparent;
+  color: #FE7646;
+}
+.about .about-accordion .ui-accordion-content .about-card .about-card-action button svg {
+  fill: #FE7646;
+}
+.about .about-accordion .ui-accordion-content .about-card .about-card-action button:hover {
+  cursor: pointer;
+  color: #d05225;
+}
+.about .about-accordion .ui-accordion-content .about-card .about-card-action button:hover svg {
+  fill: #d05225;
+}
+.about .about-accordion .ui-accordion-content .about-card .about-card-action button p {
+  font-family: MontserratRegular, sans-serif;
+  font-size: 24px;
+}
+.about .about-accordion .ui-accordion-content .about-card:hover .about-card-title {
+  font-size: 33px;
+}
+.about .about-accordion .ui-accordion-content .cafe .about-card-title {
+  margin-top: unset;
+}
+.about .about-accordion .ui-accordion-content .cafe:hover .about-card-desc {
+  font-size: 25px;
+}
+.about .about-accordion .ui-accordion-content .cafe .about-card-desc {
+  font-family: MontserratRegular, sans-serif;
+  font-size: 24px;
+  text-align: center;
+  display: inline-block;
+  transition: font-size 0.3s;
+}
+.about .about-accordion .ui-accordion-content .cafe .about-card-desc a {
+  color: #FE7646;
+  font-style: italic;
+}
+.about .about-accordion .ui-accordion-content .cafe .about-card-desc a:hover {
+  color: #d05225;
+}
+.about .about-accordion .ui-accordion-content .cafe .about-card-action a {
+  text-decoration: none;
+  color: #FE7646;
+  font-size: 24px;
+  font-family: MontserratRegular, sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.about .about-accordion .ui-accordion-content .cafe .about-card-action a:hover {
+  cursor: pointer;
+  color: #d05225;
+}
+.about .about-accordion .ui-accordion-content .cafe .about-card-action a:hover svg {
+  fill: #d05225;
+}
+.about .about-accordion .ui-accordion-content .cafe .about-card-action a svg {
+  fill: #FE7646;
+}
+.about .about-accordion .ui-accordion-content .about-card-none {
+  background-image: url("../main/images/background-about-card.png");
+  background-position: center;
+  background-size: cover;
+  width: 515px;
+  height: 344px;
+  padding: 36px 27px;
+  flex-direction: column;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.25);
+  display: none;
+  justify-content: center;
+}
+.about .about-accordion .ui-accordion-content .about-card-none .about-card-title {
+  font-family: MontserratRegular, sans-serif;
+  font-size: 32px;
+  text-align: center;
+  color: #2B2104;
+}
+.about .about-accordion .ui-accordion-content .about-card-none .about-card-desc {
+  font-family: MontserratRegular, sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+.about .about-accordion .ui-accordion-content .about-card-none .about-card-action {
+  display: none;
+}
+.about .about-accordion .ui-accordion-content #about-card-one .about-card-desc {
+  font-family: MontserratRegular, sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+  text-align: left;
+}
+.about .about-accordion .ui-accordion-content #about-card-one .about-card-desc .about-card-desc-items {
+  margin-left: 27px;
+  color: #2B2104;
+}
+.about .wave-two {
+  background-image: url("../main/images/wave.png");
+  bottom: 0;
+  left: 0;
+}
+.price {
+  padding: 60px 0 100px 0;
+  background: #FFFEFD;
+  position: relative;
+}
+.price .price-title {
+  font-family: Riffic, sans-serif;
+  font-size: 64px;
+  text-align: center;
+  color: #5A94CA;
+  margin-bottom: 85px;
+}
+.price .price-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.price .price-cards .price-card {
+  width: 376px;
+  height: 479px;
+  padding: 48px 47px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(160, 153, 153, 0.25);
+  transition: 0.3s;
+}
+.price .price-cards .price-card:hover {
+  transform: scale(1.03);
+}
+.price .price-cards .price-card:hover .price-card-title {
+  transform: scale(1.1);
+}
+.price .price-cards .price-card .price-card-title {
+  font-family: Rubik, sans-serif;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 32px;
+  transition: 0.3s;
+}
+.price .price-cards .price-card .price-card-desc {
+  width: 100%;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+}
+.price .price-cards .price-card .price-card-desc .price-card-desc-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: MontserratRegular, sans-serif;
+  font-size: 24px;
+  margin: 8px 0 8px 0;
+}
+.price .price-cards .price-card .price-card-desc b {
+  font-weight: bold;
+}
+.price .price-cards .price-card:first-child {
+  color: #F2775A;
+  background: #FCF2ED;
+}
+.price .price-cards .price-card:first-child .price-card-desc {
+  color: #BE4427;
+}
+.price .price-cards .price-card:first-child .price-card-desc .price-card-desc-text {
+  justify-content: center;
+}
+.price .price-cards .price-card:first-child .price-card-image {
+  animation: priceImage 3s linear infinite;
+}
+.price .price-cards .price-card:nth-child(2) {
+  color: #44BB3A;
+  background: #C7EAC3;
+}
+.price .price-cards .price-card:nth-child(2) .price-card-desc {
+  color: #396B1B;
+}
+.price .price-cards .price-card:nth-child(2) .price-card-image {
+  animation: priceImage 3.3s linear infinite;
+}
+.price .price-cards .price-card:nth-child(3) {
+  color: #FDA843;
+  background: #FFEDD7;
+}
+.price .price-cards .price-card:nth-child(3) .price-card-desc {
+  color: #B0660D;
+}
+.price .price-cards .price-card:nth-child(3) .price-card-image {
+  animation: priceImage 2.7s linear infinite;
+}
+.price .price-cards .price-card .price-card-image {
+  text-align: center;
+  width: 160px;
+  height: 160px;
+}
+.price .price-cards .price-card .price-card-image img {
+  width: 100%;
+}
+.price .price-text {
+  left: calc(50% - 280px / 2 - 1px);
+  font-family: MontserratLight, sans-serif;
+  font-size: 24px;
+  text-align: center;
+  color: #38250D;
+  margin-top: 60px;
+}
+.contacts {
+  padding: 140px 0 120px 0;
+  position: relative;
+  background: #FFF9F2;
+}
+.contacts .wave-two {
+  background-image: url("../main/images/wave.png");
+  top: 0;
+  left: 0;
+  rotate: 180deg;
+}
+.contacts .contacts-title {
+  font-family: Riffic, sans-serif;
+  font-size: 64px;
+  text-align: center;
+  color: #5A94CA;
+  margin-bottom: 80px;
+}
+.contacts .contacts-map {
+  box-shadow: 0px -1px 16px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  width: 994px;
+  margin: 0 auto;
+}
+.contacts .contacts-map .map {
+  width: 994px;
+  height: 500px;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+}
+.contacts .contacts-map .contacts-map-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding: 27px 68px;
+  background: #FFFEFC;
+  border-radius: 0 0 20px 20px;
+  height: 172px;
+  box-sizing: border-box;
+}
+.contacts .contacts-map .contacts-map-description .contacts-map-description-text {
+  font-family: MontserratLight, sans-serif;
+  font-size: 24px;
+}
+.contacts .contacts-map .contacts-map-description .contacts-map-description-text b {
+  font-weight: bold;
+}
+.footer {
+  background: #464646;
+  padding: 38px 0;
+}
+.footer .footer-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .footer-menu a {
+  font-family: MontserratRegular, sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  color: #FFFEFC;
+}
