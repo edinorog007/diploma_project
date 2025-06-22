@@ -10,7 +10,7 @@ const cookieParser = require('cookie-parser');
 const app = express();
 
 // Настройка CORS
-const allowedOrigins = ['http://localhost:5000', 'http://127.0.0.1:5500', 'http://localhost:5500'];
+const allowedOrigins = ['http://localhost:5000', 'http://127.0.0.1:5500', 'http://localhost:5500', 'https://edinorog007.github.io/diploma_project/'];
 
 app.use(cors({
   origin: function(origin, callback) {
